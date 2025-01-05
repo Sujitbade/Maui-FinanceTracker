@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using MudBlazor.Services;
+using PersonalFinanceTracker.Services;
+
 
 namespace PersonalFinanceTracker
 {
@@ -16,9 +19,15 @@ namespace PersonalFinanceTracker
 
             builder.Services.AddMauiBlazorWebView();
 
+
+            builder.Services.AddSingleton<IUserService, UserService>();
+            builder.Services.AddSingleton<AuthenticationService>();
+
 #if DEBUG
-    		builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
+
+            builder.Services.AddMudServices();
 #endif
 
             return builder.Build();

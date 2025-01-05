@@ -1,4 +1,17 @@
-﻿@inherits LayoutComponentBase
+﻿@using PersonalFinanceTracker.Services
+@inherits LayoutComponentBase
+
+@inject AuthenticationService authStateService
+
+@* Required *@
+<MudThemeProvider />
+<MudPopoverProvider />
+
+@* Needed for dialogs *@
+<MudDialogProvider />
+
+@* Needed for snackbars *@
+<MudSnackbarProvider />
 
 <div class="page">
     <div class="sidebar">

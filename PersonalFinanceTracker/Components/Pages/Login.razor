@@ -1,0 +1,37 @@
+﻿@page "/"
+@using PersonalFinanceTracker.Components.Layout
+@layout AuthLayout
+
+@using PersonalFinanceTracker.Services
+@inject NavigationManager navigationManager
+@inject AuthenticationService authStateService
+@inject IUserService userService
+
+
+<div>
+    <!-- MudContainer wraps the form to apply structure and alignment -->
+    <MudContainer MaxWidth="MaxWidth.Medium">
+        <!-- Custom div to add border styling -->
+        <div class="border-radius-8" style="border: 2px solid #ccc; padding: 16px;">
+            <form>
+                <div>
+                    <MudTextField @bind-Value="username" Label="Username" Variant="Variant.Outlined"></MudTextField>
+                </div>
+                <div>
+                    <MudTextField @bind-Value="password" Label="Password" Variant="Variant.Outlined" Type="password"></MudTextField>
+                </div>
+                <MudButton OnClick="LoginUser" Variant="Variant.Filled">Login</MudButton>
+            </form>
+        </div>
+    </MudContainer>
+
+    <p>
+        Don't have an account?
+        <MudLink Href="/register">Sign Up</MudLink>
+    </p>
+</div>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p class="error-message">@errorMessage</p>
+}

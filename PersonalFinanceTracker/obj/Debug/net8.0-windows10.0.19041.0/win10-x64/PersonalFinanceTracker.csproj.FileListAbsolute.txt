@@ -25,6 +25,8 @@ D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileProviders.Physical.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Localization.dll
+D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Localization.Abstractions.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.Abstractions.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Logging.Debug.dll
@@ -55,6 +57,8 @@ D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.Projection.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.Projection.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll
+D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MudBlazor.dll
+D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ar\Microsoft.Maui.Controls.resources.dll
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ca\Microsoft.Maui.Controls.resources.dll
@@ -182,6 +186,7 @@ D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19
 D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.AssemblyInfoInputs.cache
 D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.AssemblyInfo.cs
 D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.csproj.CoreCompileInputs.cache
+D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.sourcelink.json
 D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Personal.50996CEA.Up2Date
 D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.dll

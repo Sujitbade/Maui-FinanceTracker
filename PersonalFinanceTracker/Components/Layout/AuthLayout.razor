@@ -1,0 +1,33 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudSnackbarProvider />
+
+<div class="auth-layout">
+    <main>
+        @Body
+    </main>
+</div>
+
+@code {
+    // You can add any additional logic specific to the Auth layout here
+}
+
+<style>
+    .auth-layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(180deg, rgb(240, 240, 240) 0%, rgb(210, 210, 210) 100%);
+    }
+
+    main {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+</style>

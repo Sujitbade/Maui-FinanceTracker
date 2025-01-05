@@ -1,0 +1,33 @@
+﻿@page "/register"
+@layout AuthLayout
+@using PersonalFinanceTracker.Components.Layout
+@using PersonalFinanceTracker.Models
+@using PersonalFinanceTracker.Services
+@inject IUserService userService
+@inject NavigationManager navigationManager
+
+<MudContainer Class="border-radius-8" Style="padding: 16px; border: 2px solid #ccc;">
+    <form>
+        <div>
+            <MudTextField @bind-Value="newUser.UserId" Label="User ID" Variant="Variant.Outlined" Type="number"></MudTextField>
+        </div>
+        <div>
+            <MudTextField @bind-Value="newUser.Username" Label="User Name" Variant="Variant.Outlined"></MudTextField>
+        </div>
+        <div>
+            <MudTextField @bind-Value="newUser.Password" Label="Password" Variant="Variant.Outlined" Type="passwordFieldType"></MudTextField>
+        </div>
+        <div>
+            <MudTextField @bind-Value="newUser.PreferredCurrency" Label="Preferred Currency" Variant="Variant.Outlined"></MudTextField>
+        </div>
+
+        <MudButton OnClick="AddNewUser" Variant="Variant.Filled">Add User</MudButton>
+    </form>
+</MudContainer>
+
+@if (errorMessage != null)
+{
+    <p class="error-message">@errorMessage</p>
+}
+
+
