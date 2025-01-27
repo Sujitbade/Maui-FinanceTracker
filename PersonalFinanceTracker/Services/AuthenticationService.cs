@@ -18,11 +18,6 @@ namespace PersonalFinanceTracker.Services
             currentUser = user;
         }
 
-        public async Task<decimal> GetUserBalance()
-        {
-            return currentUser.Balance;
-        }
-
         public void Logout()
         {
             currentUser = null;

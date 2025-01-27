@@ -1,7 +1,9 @@
 ﻿@page "/debt-page"
 
 @using PersonalFinanceTracker.Models
+@using MudBlazor
 @inject DebtService debtService
+@inject AuthenticationService authStateService
 
 <h3 class="mb-4">Debt Overview</h3>
 
@@ -57,8 +59,8 @@
                                       Variant="Variant.Outlined" Type="number" />
                     </MudForm>
                 </div>
-                <div class="modal-footer" gap="4">
-                    <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="SaveDebt">
+                <div class="modal-footer">
+                    <MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="SaveDebt">
                         Save
                     </MudButton>
                     <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="CloseDebtForm">
@@ -102,7 +104,6 @@
     private Debt newDebt = new Debt();
     private List<Debt> debts = new List<Debt>();
 
-    // Sample debt data for display purposes
     private decimal TotalDebtAmount => debts.Sum(d => d.Amount);
     private int TotalDebtTransaction => debts.Count;
 
@@ -116,32 +117,65 @@
     private void CloseDebtForm()
     {
         showDebtForm = false;
-        newDebt = new Debt(); // Reset form
+        newDebt = new Debt(); // Reset the form
     }
 
     // Method to save the new debt
     private async Task SaveDebt()
     {
-       // Save the new debt using DebtService
-        await debtService.SaveDebtsAsync(new List<Debt> { newDebt });
+        try
+        {
+            var currentUser = authStateService.GetAuthenticatedUser();
+            if (currentUser != null)
+            {
+                debts.Add(new Debt
+                    {
+                        UserId = currentUser.UserId,
+                        Source = newDebt.Source,
+                        DueDate = newDebt.DueDate,
+                        Amount = newDebt.Amount,
+                        Status = newDebt.Status = "Pending"
+                    
+                    });
+            }
 
-        // Refresh the debt list after saving
-        debts = await debtService.GetAllDebtsAsync();
+            // Save the debt using DebtService
+                await debtService.SaveDebtsAsync(debts);
 
-        // Close the form
-        CloseDebtForm();
-    }
 
-    // Filter method for the debt table (if necessary)
-    private bool FilterFunc(Debt debt)
-    {
-        // Implement filter logic if needed (e.g., based on date range or search string)
-        return true;
+            // Close the form
+            CloseDebtForm();
+        }
+        catch (Exception ex)
+        {
+            ShowAlert($"Error saving debt: {ex.Message}", Severity.Error);
+        }
     }
 
     // Load debts when component initializes
     protected override async Task OnInitializedAsync()
     {
-        debts = await debtService.GetAllDebtsAsync();
+        try
+        {
+            var currentUser = authStateService.GetAuthenticatedUser();
+            if (currentUser != null)
+            {
+                debts = await debtService.GetDebtsAsync(currentUser.UserId);
+            }
+            else
+            {
+                ShowAlert("User not authenticated.", Severity.Error);
+            }
+        }
+        catch (Exception ex)
+        {
+            ShowAlert($"Error loading debts: {ex.Message}", Severity.Error);
+        }
+    }
+
+    private void ShowAlert(string message, Severity severity)
+    {
+        // Implement an alert mechanism here (e.g., Snackbar, Toast, etc.)
+        Console.WriteLine($"[{severity}] {message}");
     }
 }

@@ -1,16 +1,51 @@
 [
   {
-    "Source": "New",
-    "Amount": 1000.0,
-    "DueDate": "2025-01-17T12:30:13.4407221+05:45",
-    "Status": null,
-    "UserId": 0
+    "Source": "New Debt",
+    "Amount": 2000.0,
+    "DueDate": "2025-01-28T01:18:35.2376378+05:45",
+    "Status": "Pending",
+    "UserId": 1
   },
   {
     "Source": "New Debt",
-    "Amount": 1000.0,
-    "DueDate": "2025-01-17T12:41:50.5323713+05:45",
-    "Status": null,
-    "UserId": 0
+    "Amount": 2000.0,
+    "DueDate": "2025-01-28T01:18:35.2376378+05:45",
+    "Status": "Pending",
+    "UserId": 1
+  },
+  {
+    "Source": "Debt",
+    "Amount": 10000.0,
+    "DueDate": "2025-01-28T01:27:24.3053224+05:45",
+    "Status": "Pending",
+    "UserId": 1
+  },
+  {
+    "Source": "New Debt",
+    "Amount": 2000.0,
+    "DueDate": "2025-01-28T01:18:35.2376378+05:45",
+    "Status": "Pending",
+    "UserId": 1
+  },
+  {
+    "Source": "New Debt",
+    "Amount": 2000.0,
+    "DueDate": "2025-01-28T01:18:35.2376378+05:45",
+    "Status": "Pending",
+    "UserId": 1
+  },
+  {
+    "Source": "Debt",
+    "Amount": 10000.0,
+    "DueDate": "2025-01-28T01:27:24.3053224+05:45",
+    "Status": "Pending",
+    "UserId": 1
+  },
+  {
+    "Source": "Debt",
+    "Amount": 100.0,
+    "DueDate": "2025-01-28T01:29:57.0910735+05:45",
+    "Status": "Pending",
+    "UserId": 1
   }
 ]

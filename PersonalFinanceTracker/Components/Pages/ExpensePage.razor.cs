@@ -6,36 +6,43 @@ namespace PersonalFinanceTracker.Components.Pages
 {
     public partial class ExpensePage
     {
+        // State and Data Variables
         private string searchString = "";
         private bool showForm;
         private DateRange? selectedDateRange;
         private List<Transaction> transactions = new List<Transaction>();
         private Transaction newTransaction = new Transaction();
         private string selectedTag;
-        private decimal UserBalance { get; set; }
+
+        private decimal UserBalance;
         private List<string> Tags = new List<string>();
 
-        // Alert component properties
+        // Alert Properties
         private bool showAlert;
         private string alertMessage;
         private Severity alertSeverity;
 
+        // Computed Properties
+        private decimal TotalExpenseAmount => transactions.Sum(transaction => transaction.Amount);
+        private int TotalExpenseTransaction => transactions.Count;
+
+        /// <summary>
+        /// Initializes data on component load.
+        /// </summary>
         protected override async Task OnInitializedAsync()
         {
             try
             {
-                // Load tags
                 Tags = await tagService.ReadTagsAsync();
-
-                // Get the authenticated user
-                var currentUser = authStateService.GetAuthenticatedUser(); // Replace this with your actual method to get the user
+                var currentUser = authStateService.GetAuthenticatedUser();
 
                 if (currentUser != null)
                 {
-                    UserBalance = await userBalanceService.GetUserBalanceAsync(currentUser.UserId);
+                    var incomeTransactions = await transactionService.GetIncomeTransactionsAsync(currentUser.UserId);
+                    var expenseTransactions = await transactionService.GetExpenseTransactionsAsync(currentUser.UserId);
 
-                    // Load expense transactions for the authenticated user
-                    transactions = await transactionService.GetExpenseTransactionsAsync(currentUser.UserId);
+                    UserBalance = incomeTransactions.Sum(t => t.Amount) - expenseTransactions.Sum(t => t.Amount);
+                    transactions = expenseTransactions;
                 }
                 else
                 {
@@ -48,124 +55,98 @@ namespace PersonalFinanceTracker.Components.Pages
             }
         }
 
-        private decimal TotalExpenseAmount => transactions.Sum(transaction => transaction.Amount);
-        private int TotalExpenseTransaction => transactions.Count(transaction => transaction.Type == "Expense");
+        /// <summary>
+        /// Opens the Add Transaction form.
+        /// </summary>
+        private void OpenForm() => showForm = true;
 
-        private void OpenForm()
-        {
-            newTransaction = new Transaction(); // Reset form data
-            selectedTag = null;                 // Reset tag selection
-            showForm = true;
-        }
+        /// <summary>
+        /// Closes the Add Transaction form.
+        /// </summary>
+        private void CloseForm() => showForm = false;
 
-        private void CloseForm()
-        {
-            showForm = false;
-        }
-
+        /// <summary>
+        /// Handles adding a new expense transaction.
+        /// </summary>
         private async Task AddTransaction()
         {
-            // Validate transaction details
-            if (string.IsNullOrWhiteSpace(newTransaction.Description) || newTransaction.Amount <= 0)
+            if (string.IsNullOrWhiteSpace(newTransaction.Description) || newTransaction.Amount <= 0 ||
+                string.IsNullOrWhiteSpace(selectedTag))
             {
-                ShowAlert("Invalid transaction details. Please enter a valid description and amount.", Severity.Warning);
+                ShowAlert("Invalid details. Please fill out all fields.", Severity.Warning);
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(selectedTag))
+            // Check if the expense exceeds the user's balance
+            if (newTransaction.Amount > UserBalance)
             {
-                ShowAlert("Please select a tag for the transaction.", Severity.Warning);
+                ShowAlert("Insufficient balance to add this transaction.", Severity.Warning);
                 return;
             }
 
-            // Get the authenticated user
-            var currentUser = authStateService.GetAuthenticatedUser();
-
-            if (currentUser != null)
+            try
             {
-                try
+                var currentUser = authStateService.GetAuthenticatedUser();
+                if (currentUser != null)
                 {
-                    newTransaction.Type = "Expense"; // Set the type to Expense
-
-                    // Add a new transaction
                     transactions.Add(new Transaction
                     {
-                        UserId = currentUser.UserId,  // Assign the UserId
+                        UserId = currentUser.UserId,
                         Description = newTransaction.Description,
                         Date = newTransaction.Date == default ? DateTime.UtcNow : newTransaction.Date,
                         Amount = newTransaction.Amount,
-                        Type = newTransaction.Type,
+                        Type = "Expense",
                         Tag = selectedTag
                     });
 
-                    // Save the transactions to the file
-                    await transactionService.SaveTransactionsAsync(transactions);
-
-                    // Deduct the amount from UserBalance
+                    // Update the user's balance after adding the transaction
                     UserBalance -= newTransaction.Amount;
 
-                    // Update the balance in UserBalanceService
-                    await userBalanceService.UpdateUserBalanceAsync(currentUser.UserId, UserBalance);
-
-                    // Re-fetch transactions for the user to ensure the list is up-to-date
-                    transactions = await transactionService.GetExpenseTransactionsAsync(currentUser.UserId);
-
-                    ShowAlert("Transaction added successfully.", Severity.Success);
-
-                    // Close the form or reset the input fields
+                    await transactionService.SaveTransactionsAsync(transactions);
                     CloseForm();
-                }
-                catch (Exception ex)
-                {
-                    ShowAlert($"Error adding transaction: {ex.Message}", Severity.Error);
+                    ShowAlert("Transaction added successfully.", Severity.Success);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                ShowAlert("User not authenticated.", Severity.Error);
+                ShowAlert($"Error adding transaction: {ex.Message}", Severity.Error);
             }
         }
 
+
+        /// <summary>
+        /// Filters transactions based on the search input and selected date range.
+        /// </summary>
         private bool FilterFunc(Transaction transaction)
         {
-            // Title filter
             if (!string.IsNullOrWhiteSpace(searchString) &&
                 !transaction.Description.Contains(searchString, StringComparison.OrdinalIgnoreCase))
             {
                 return false;
             }
 
-            // Date range filter
-            if (selectedDateRange != null)
+            if (selectedDateRange != null &&
+                (transaction.Date < selectedDateRange.Start || transaction.Date > selectedDateRange.End))
             {
-                var startDate = selectedDateRange.Start;
-                var endDate = selectedDateRange.End;
-
-                if (startDate.HasValue && endDate.HasValue)
-                {
-                    if (transaction.Date < startDate.Value || transaction.Date > endDate.Value)
-                    {
-                        return false;
-                    }
-                }
+                return false;
             }
 
             return true;
         }
 
-        private void ClearDateRange()
-        {
-            selectedDateRange = null;
-        }
+        /// <summary>
+        /// Resets the selected date range filter.
+        /// </summary>
+        private void ClearDateRange() => selectedDateRange = null;
 
+        /// <summary>
+        /// Displays an alert with a message and severity level.
+        /// </summary>
         private void ShowAlert(string message, Severity severity)
         {
             alertMessage = message;
             alertSeverity = severity;
             showAlert = true;
-
-            // Auto-hide alert after a few seconds (optional)
-            _ = Task.Delay(3000).ContinueWith(_ => showAlert = false);
         }
     }
 }

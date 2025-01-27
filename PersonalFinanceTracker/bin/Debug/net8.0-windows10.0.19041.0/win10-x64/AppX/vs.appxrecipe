@@ -30,7 +30,7 @@
     <AppXManifest Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-27T14:21:33.575</Modified>
+      <Modified>2025-01-27T19:44:42.725</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.dll">
       <PackagePath>PersonalFinanceTracker.dll</PackagePath>
-      <Modified>2025-01-17T06:48:54.535</Modified>
+      <Modified>2025-01-27T19:44:42.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>PersonalFinanceTracker.exe</PackagePath>
-      <Modified>2025-01-17T06:48:54.539</Modified>
+      <Modified>2025-01-27T19:44:42.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

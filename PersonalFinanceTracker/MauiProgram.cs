@@ -26,7 +26,6 @@ namespace PersonalFinanceTracker
             builder.Services.AddScoped<TransactionService>();
             builder.Services.AddMudServices();
             builder.Services.AddScoped<DebtService>();
-            builder.Services.AddScoped<UserBalanceService>();
 
 
 #if DEBUG

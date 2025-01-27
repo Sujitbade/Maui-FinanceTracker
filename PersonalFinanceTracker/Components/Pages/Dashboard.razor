@@ -3,71 +3,111 @@
 @using PersonalFinanceTracker.Services
 @inject AuthenticationService authStateService
 @inject TransactionService transactionService
-@inject UserBalanceService userBalanceService
+@inject DebtService debtService
 @using MudBlazor
 
 <h3>Dashboard</h3>
 
+<!-- Dashboard Summary Section -->
 <MudGrid Spacing="3">
     <!-- Total Income -->
     <MudItem xs="12" sm="6" md="3">
-        <MudCard Outlined="true" Class="p-1">
+        <MudCard Outlined="true" Class="p-3 shadow-md">
             <MudCardContent>
                 <MudText Typo="Typo.body1" Class="fw-bold">Total Income</MudText>
-                <MudText Typo="Typo.h6" Class="text-success">@TotalIncome.ToString("C")</MudText>
+                <MudText Typo="Typo.h5" Color="Color.Success">@TotalIncome.ToString("C")</MudText>
             </MudCardContent>
         </MudCard>
     </MudItem>
 
     <!-- Total Expense -->
     <MudItem xs="12" sm="6" md="3">
-        <MudCard Outlined="true" Class="p-1">
+        <MudCard Outlined="true" Class="p-3 shadow-md">
             <MudCardContent>
                 <MudText Typo="Typo.body1" Class="fw-bold">Total Expense</MudText>
-                <MudText Typo="Typo.h6" Class="text-danger">@TotalExpense.ToString("C")</MudText>
+                <MudText Typo="Typo.h5" Color="Color.Error">@TotalExpense.ToString("C")</MudText>
             </MudCardContent>
         </MudCard>
     </MudItem>
 
     <!-- Current Balance -->
     <MudItem xs="12" sm="6" md="3">
-        <MudCard Outlined="true" Class="p-1">
+        <MudCard Outlined="true" Class="p-3 shadow-md">
             <MudCardContent>
                 <MudText Typo="Typo.body1" Class="fw-bold">Total Balance</MudText>
-                <MudText Typo="Typo.h6" Class="text-primary">@UserBalance.ToString("C")</MudText>
+                <MudText Typo="Typo.h5" Color="Color.Primary">@UserBalance.ToString("C")</MudText>
             </MudCardContent>
         </MudCard>
     </MudItem>
+</MudGrid>
 
-    <!-- Donut Chart -->
+<hr />
+
+<!-- Donut Chart Section -->
+<MudGrid Class="mt-4">
     <MudItem xs="12" sm="6" md="6">
-        <MudPaper Class="pa-4">
-            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" InputData="@chartData" InputLabels="@chartLabels" />
+        <MudPaper Class="pa-4 shadow-md">
+            <MudText Typo="Typo.h6" Class="fw-bold mb-3" Align="Align.Center">Income vs Expense</MudText>
+            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" InputData="@chartData" InputLabels="@chartLabels"/>
         </MudPaper>
     </MudItem>
 </MudGrid>
 
-<MudPaper Class="p-3 mt-4" Elevation="1">
-    <MudTable Items="transactions" SortLabel="Sort By" FixedHeader="true" Height="300px">
+<!-- Upcoming Debts Section -->
+<MudPaper Class="p-4 mt-4 shadow-md">
+    <MudText Typo="Typo.h6" Class="fw-bold mb-3">Upcoming Debts</MudText>
+    <MudTable Items="upcomingDebts" SortLabel="Sort By" FixedHeader="true" Height="300px">
+        <HeaderContent>
+            <MudTh>Title</MudTh>
+            <MudTh>Due Date</MudTh>
+            <MudTh>Amount</MudTh>
+            <MudTh>Status</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@context.Source</MudTd>
+            <MudTd>@context.DueDate.ToShortDateString()</MudTd>
+            <MudTd>@context.Amount.ToString("C")</MudTd>
+            <MudTd>
+                @if (context.DueDate <= DateTime.Now)
+                {
+                    <MudText Color="Color.Error">Overdue</MudText>
+                }
+                else
+                {
+                    <MudText Color="Color.Warning">Upcoming</MudText>
+                }
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+</MudPaper>
+
+<!-- Recent Transactions Section -->
+<MudPaper Class="p-4 mt-4 shadow-md">
+    <MudText Typo="Typo.h6" Class="fw-bold mb-3">Recent Transactions</MudText>
+    <MudTable Items="recentTransactions" SortLabel="Sort By" FixedHeader="true" Height="300px">
         <HeaderContent>
             <MudTh>Description</MudTh>
             <MudTh>Date</MudTh>
-            <MudTableSortLabel SortBy="new Func<Transaction, object>(x => x.Amount)">Amount</MudTableSortLabel>
+            <MudTh>Amount</MudTh>
             <MudTh>Type</MudTh>
         </HeaderContent>
         <RowTemplate>
             <MudTd>@context.Description</MudTd>
             <MudTd>@context.Date.ToShortDateString()</MudTd>
             <MudTd>@context.Amount.ToString("C")</MudTd>
-            <MudTd>@context.Type</MudTd>
+            <MudTd>
+                @if (context.Type == "Income")
+                {
+                    <MudText Color="Color.Success">Income</MudText>
+                }
+                else
+                {
+                    <MudText Color="Color.Error">Expense</MudText>
+                }
+            </MudTd>
         </RowTemplate>
-        <PagerContent>
-            <MudTablePager />
-        </PagerContent>
     </MudTable>
 </MudPaper>
-
-
 
 @code {
     private decimal TotalIncome => transactions.Where(t => t.Type == "Income").Sum(t => t.Amount);
@@ -79,12 +119,16 @@
     private double[] chartData => new double[] { (double)TotalIncome, (double)TotalExpense, (double)Debt };
     private string[] chartLabels => new string[] { "Total Income", "Total Expense", "Debt" };
 
-    // Transactions list
+
+    // Transactions and debts list
     private List<Transaction> transactions = new List<Transaction>();
-    private Transaction newTransaction = new Transaction();
-    private List<Debt> debts = new List<Debt>(); // Correcting variable name
-    private string selectedTransactionType = "Income"; // Default type
-    private bool isFormValid => !string.IsNullOrWhiteSpace(newTransaction.Description) && newTransaction.Amount > 0;
+    private List<Debt> debts = new List<Debt>();
+
+    // Recent Transactions - only show the most recent 5
+    private List<Transaction> recentTransactions => transactions.OrderByDescending(t => t.Date).Take(5).ToList();
+
+    // Upcoming Debts - filter only debts that are not settled and sort in descending order
+    private List<Debt> upcomingDebts => debts.Where(d => d.DueDate > DateTime.Now).OrderByDescending(d => d.DueDate).ToList();
 
     // Called when component initializes
     protected override async Task OnInitializedAsync()
@@ -92,11 +136,9 @@
         var currentUser = authStateService.GetAuthenticatedUser();
         if (currentUser != null)
         {
-            UserBalance = await userBalanceService.GetUserBalanceAsync(currentUser.UserId);
             transactions = await transactionService.GetTransactionsAsync(currentUser.UserId);
             debts = await debtService.GetDebtsAsync(currentUser.UserId);
+            UserBalance = TotalIncome - TotalExpense;
         }
-    }
-
     }
 }

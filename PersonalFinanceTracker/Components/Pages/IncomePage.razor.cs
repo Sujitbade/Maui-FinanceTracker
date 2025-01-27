@@ -26,7 +26,6 @@ namespace PersonalFinanceTracker.Components.Pages
 
             if (currentUser != null)
             {
-                UserBalance = await userBalanceService.GetUserBalanceAsync(currentUser.UserId);
                 // Load income transactions for the authenticated user
                 transactions = await transactionService.GetIncomeTransactionsAsync(currentUser.UserId);
             }
@@ -63,24 +62,17 @@ namespace PersonalFinanceTracker.Components.Pages
             var currentUser = authStateService.GetAuthenticatedUser(); // Get the authenticated user
             if (currentUser != null)
             {
-                // Create a new transaction and add it to the list
-                transactions.Add(new Transaction
-                {
-                    UserId = currentUser.UserId,  // Assign the UserId
-                    Description = newTransaction.Description,
-                    Date = newTransaction.Date == default ? DateTime.Now : newTransaction.Date,
-                    Amount = newTransaction.Amount,
-                    Type = "Income",
-                    Tag = selectedTag
-                });
+                // Assign values to the new transaction
+                newTransaction.UserId = currentUser.UserId;  // Assign the UserId
+                newTransaction.Date = newTransaction.Date == default ? DateTime.Now : newTransaction.Date;
+                newTransaction.Type = "Income";
+                newTransaction.Tag = selectedTag;
 
-                // Save the transactions to the file
-                await transactionService.SaveTransactionsAsync(transactions);
+                // Save the new transaction directly
+                await transactionService.SaveTransactionsAsync(new List<Transaction> { newTransaction });
 
-                    UserBalance += newTransaction.Amount;
-
-                // Optionally update the balance in UserBalanceService
-                await userBalanceService.UpdateUserBalanceAsync(currentUser.UserId, UserBalance);
+                // Update user balance
+                UserBalance += newTransaction.Amount;
 
                 // Re-fetch transactions for the user to ensure the list is up-to-date
                 transactions = await transactionService.GetIncomeTransactionsAsync(currentUser.UserId);
@@ -91,9 +83,9 @@ namespace PersonalFinanceTracker.Components.Pages
             {
                 Console.WriteLine("User not authenticated.");
             }
-        }
+    }
 
-        private bool FilterFunc(Transaction transaction)
+    private bool FilterFunc(Transaction transaction)
         {
             // Title filter
             if (!string.IsNullOrWhiteSpace(searchString) &&

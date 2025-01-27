@@ -2,120 +2,48 @@
   {
     "UserId": 1,
     "Description": "Income",
-    "Date": "2025-01-17T11:21:22.6608029+05:45",
-    "Amount": 1000.0,
+    "Date": "2025-01-28T00:15:43.3225478+05:45",
+    "Amount": 10.0,
     "Type": "Income",
-    "Tag": "Food"
+    "Tag": "Business"
   },
   {
     "UserId": 1,
-    "Description": "Expense ",
-    "Date": "2025-01-17T11:21:43.4038563+05:45",
-    "Amount": 1000.0,
-    "Type": "Expense",
-    "Tag": "Sales"
-  },
-  {
-    "UserId": 1,
-    "Description": "Income",
-    "Date": "2025-01-17T11:21:22.6608029+05:45",
-    "Amount": 1000.0,
-    "Type": "Income",
-    "Tag": "Food"
-  },
-  {
-    "UserId": 1,
-    "Description": "Income",
-    "Date": "2025-01-17T12:18:16.0833435+05:45",
-    "Amount": 1000000.0,
-    "Type": "Income",
-    "Tag": "Food"
-  },
-  {
-    "UserId": 1,
-    "Description": "Expense ",
-    "Date": "2025-01-17T11:21:43.4038563+05:45",
-    "Amount": 1000.0,
-    "Type": "Expense",
-    "Tag": "Sales"
-  },
-  {
-    "UserId": 1,
-    "Description": "e",
-    "Date": "2025-01-17T06:47:12.304334Z",
-    "Amount": 10000.0,
-    "Type": "Expense",
-    "Tag": "Food"
-  },
-  {
-    "UserId": 1,
-    "Description": "Income",
-    "Date": "2025-01-17T11:21:22.6608029+05:45",
-    "Amount": 1000.0,
-    "Type": "Income",
-    "Tag": "Food"
-  },
-  {
-    "UserId": 1,
-    "Description": "Income",
-    "Date": "2025-01-17T11:21:22.6608029+05:45",
-    "Amount": 1000.0,
-    "Type": "Income",
-    "Tag": "Food"
-  },
-  {
-    "UserId": 1,
-    "Description": "Income",
-    "Date": "2025-01-17T12:18:16.0833435+05:45",
-    "Amount": 1000000.0,
-    "Type": "Income",
-    "Tag": "Food"
-  },
-  {
-    "UserId": 1,
-    "Description": "Test Income",
-    "Date": "2025-01-17T12:41:04.4137052+05:45",
-    "Amount": 1000.0,
-    "Type": "Income",
-    "Tag": "Salary"
-  },
-  {
-    "UserId": 1,
-    "Description": "Expense ",
-    "Date": "2025-01-17T11:21:43.4038563+05:45",
-    "Amount": 1000.0,
-    "Type": "Expense",
-    "Tag": "Sales"
-  },
-  {
-    "UserId": 1,
-    "Description": "Expense ",
-    "Date": "2025-01-17T11:21:43.4038563+05:45",
-    "Amount": 1000.0,
-    "Type": "Expense",
-    "Tag": "Sales"
-  },
-  {
-    "UserId": 1,
-    "Description": "e",
-    "Date": "2025-01-17T06:47:12.304334Z",
-    "Amount": 10000.0,
-    "Type": "Expense",
-    "Tag": "Food"
-  },
-  {
-    "UserId": 1,
-    "Description": "Test Expense",
-    "Date": "2025-01-17T06:56:42.6303776Z",
-    "Amount": 10000.0,
+    "Description": "Expense",
+    "Date": "2025-01-27T18:31:02.9868326Z",
+    "Amount": 10.0,
     "Type": "Expense",
     "Tag": "Investments"
   },
   {
-    "UserId": 4,
-    "Description": "New Income",
-    "Date": "2025-01-27T20:07:45.668342+05:45",
-    "Amount": 2000.0,
+    "UserId": 1,
+    "Description": "Income",
+    "Date": "2025-01-28T00:21:56.3518646+05:45",
+    "Amount": 200.0,
+    "Type": "Income",
+    "Tag": "Business"
+  },
+  {
+    "UserId": 1,
+    "Description": "Expense",
+    "Date": "2025-01-27T18:31:02.9868326Z",
+    "Amount": 10.0,
+    "Type": "Expense",
+    "Tag": "Investments"
+  },
+  {
+    "UserId": 1,
+    "Description": "Expense",
+    "Date": "2025-01-27T18:37:16.1870048Z",
+    "Amount": 20.0,
+    "Type": "Expense",
+    "Tag": "Food"
+  },
+  {
+    "UserId": 1,
+    "Description": "NewIncom",
+    "Date": "2025-01-28T00:31:52.0245429+05:45",
+    "Amount": 50000.0,
     "Type": "Income",
     "Tag": "Food"
   }
