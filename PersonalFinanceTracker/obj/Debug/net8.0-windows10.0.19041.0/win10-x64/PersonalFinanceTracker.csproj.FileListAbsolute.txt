@@ -1,3 +1,4 @@
+D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Data\tags.json
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.exe
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
 D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.deps.json

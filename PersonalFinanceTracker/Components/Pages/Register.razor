@@ -1,33 +1,115 @@
 ﻿@page "/register"
+
 @layout AuthLayout
 @using PersonalFinanceTracker.Components.Layout
+
 @using PersonalFinanceTracker.Models
 @using PersonalFinanceTracker.Services
-@inject IUserService userService
-@inject NavigationManager navigationManager
 
-<MudContainer Class="border-radius-8" Style="padding: 16px; border: 2px solid #ccc;">
-    <form>
-        <div>
-            <MudTextField @bind-Value="newUser.UserId" Label="User ID" Variant="Variant.Outlined" Type="number"></MudTextField>
+<div>
+    <!-- MudContainer wraps the form to apply structure and alignment -->
+    <MudContainer MaxWidth="MaxWidth.Medium">
+        <!-- Custom div to add border styling -->
+        <div class="border-radius-8" style="border: 2px solid #ccc; padding: 10px;">
+            <form>
+                <div>
+                    <MudTextField @bind-Value="newUser.Username"
+                                  Label="User Name"
+                                  Variant="Variant.Outlined"
+                                  Required="true"
+                                  HelperText="Enter your username"></MudTextField>
+                </div>
+                <div>
+                    <MudTextField @bind-Value="newUser.Password"
+                                  Label="Password"
+                                  Variant="Variant.Outlined"
+                                  Required="true"
+                                  InputType="@PasswordInput"
+                                  Adornment="Adornment.End"
+                                  AdornmentIcon="@PasswordInputIcon"
+                                  OnAdornmentClick="showPasswordButton"
+                                  AdornmentAriaLabel="Show Password" />
+                </div>
+                <div>
+                    <MudSelect Label="Currency"
+                               @bind-Value="newUser.PreferredCurrency"
+                               T="string"
+                               Required="true"
+                               HelperText="Select your preferred currency">
+                        <MudSelectItem Value=@("USD")>USD</MudSelectItem>
+                        <MudSelectItem Value=@("EUR")>EUR</MudSelectItem>
+                        <MudSelectItem Value=@("NRS")>NRS</MudSelectItem>
+                        <MudSelectItem Value=@("IRS")>IRS</MudSelectItem>
+                    </MudSelect>
+                </div>
+                <MudButton OnClick="AddNewUser"
+                           Variant="Variant.Filled"
+                           Class="mt-4">Register</MudButton>
+            </form>
         </div>
-        <div>
-            <MudTextField @bind-Value="newUser.Username" Label="User Name" Variant="Variant.Outlined"></MudTextField>
-        </div>
-        <div>
-            <MudTextField @bind-Value="newUser.Password" Label="Password" Variant="Variant.Outlined" Type="passwordFieldType"></MudTextField>
-        </div>
-        <div>
-            <MudTextField @bind-Value="newUser.PreferredCurrency" Label="Preferred Currency" Variant="Variant.Outlined"></MudTextField>
-        </div>
+    </MudContainer>
+    <p>
+        Have an account?
+        <MudLink Href="/">Login</MudLink>
+    </p>
+</div>
 
-        <MudButton OnClick="AddNewUser" Variant="Variant.Filled">Add User</MudButton>
-    </form>
-</MudContainer>
-
-@if (errorMessage != null)
+@if (!string.IsNullOrEmpty(errorMessage))
 {
-    <p class="error-message">@errorMessage</p>
+    <MudText Class="mt-2" Color="Color.Error">@errorMessage</MudText>
 }
 
+@if (successMessage != null)
+{
+    <MudText Class="mt-2" Color="Color.Success">@successMessage</MudText>
+}
 
+@code {
+    private User newUser = new();
+    private string? errorMessage;
+    private string? successMessage;
+    private InputType PasswordInput = InputType.Password;
+    private string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+
+    bool isShow;
+
+    private async Task AddNewUser()
+    {
+        errorMessage = null;
+        successMessage = null;
+
+        if (string.IsNullOrWhiteSpace(newUser.Username) ||
+            string.IsNullOrWhiteSpace(newUser.Password) ||
+            string.IsNullOrWhiteSpace(newUser.PreferredCurrency))
+        {
+            errorMessage = "All fields are required.";
+            return;
+        }
+
+        try
+        {
+            var result = await userService.RegisterUserAsync(newUser);
+            if (result)
+            {
+                successMessage = "User registered successfully!";
+                navigationManager.NavigateTo("/");
+                newUser = new User(); // Reset form
+            }
+            else
+            {
+                errorMessage = "Registration failed. Username may already exist.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+    public void showPasswordButton()
+    {
+        isShow = !isShow; // Toggle visibility state
+        PasswordInputIcon = isShow ? Icons.Material.Filled.Visibility : Icons.Material.Filled.VisibilityOff;
+        PasswordInput = isShow ? InputType.Text : InputType.Password;
+    }
+
+}

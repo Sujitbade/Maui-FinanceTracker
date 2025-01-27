@@ -30,25 +30,25 @@
     <AppXManifest Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-05T06:06:53.629</Modified>
+      <Modified>2025-01-27T14:21:33.575</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-01-04T19:46:58.941</Modified>
+      <Modified>2025-01-17T02:26:44.722</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.runtimeconfig.json">
       <PackagePath>PersonalFinanceTracker.runtimeconfig.json</PackagePath>
-      <Modified>2025-01-04T15:12:04.353</Modified>
+      <Modified>2025-01-17T02:26:44.325</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.dll">
       <PackagePath>PersonalFinanceTracker.dll</PackagePath>
-      <Modified>2025-01-05T06:06:53.262</Modified>
+      <Modified>2025-01-17T06:48:54.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>PersonalFinanceTracker.exe</PackagePath>
-      <Modified>2025-01-05T06:06:53.279</Modified>
+      <Modified>2025-01-17T06:48:54.539</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -72,27 +72,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
-      <Modified>2024-12-31T04:25:48.462</Modified>
+      <Modified>2025-01-15T11:08:43.023</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2025-01-04T15:12:02.671</Modified>
+      <Modified>2025-01-17T02:26:40.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2025-01-04T15:12:02.685</Modified>
+      <Modified>2025-01-17T02:26:40.792</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2025-01-04T15:12:02.704</Modified>
+      <Modified>2025-01-17T02:26:40.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2025-01-04T15:12:02.731</Modified>
+      <Modified>2025-01-17T02:26:40.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2025-01-04T15:12:02.840</Modified>
+      <Modified>2025-01-17T02:26:40.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -100,211 +100,215 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.610</Modified>
+      <Modified>2025-01-17T02:26:41.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.610</Modified>
+      <Modified>2025-01-17T02:26:41.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.610</Modified>
+      <Modified>2025-01-17T02:26:41.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.610</Modified>
+      <Modified>2025-01-17T02:26:41.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.609</Modified>
+      <Modified>2025-01-17T02:26:41.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.614</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.614</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.614</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.614</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.614</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.614</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.614</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.616</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.612</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.612</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.611</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.611</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.611</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.613</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.613</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.613</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.613</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.612</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.614</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.613</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.613</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.613</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.613</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.611</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.611</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.611</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.610</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.610</Modified>
+      <Modified>2025-01-17T02:26:41.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.618</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2025-01-04T15:12:03.617</Modified>
+      <Modified>2025-01-17T02:26:41.940</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\Data\tags.json">
+      <PackagePath>Data\tags.json</PackagePath>
+      <Modified>2025-01-14T09:27:29.645</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\PersonalFinanceTracker.deps.json">
       <PackagePath>PersonalFinanceTracker.deps.json</PackagePath>
-      <Modified>2025-01-04T19:46:58.667</Modified>
+      <Modified>2025-01-17T02:26:44.093</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sujee\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -696,11 +700,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\PersonalFinanceTracker.styles.css">
       <PackagePath>wwwroot\PersonalFinanceTracker.styles.css</PackagePath>
-      <Modified>2025-01-04T15:11:56.233</Modified>
+      <Modified>2025-01-17T02:26:32.754</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\PersonalFinanceTracker.bundle.scp.css">
       <PackagePath>wwwroot\PersonalFinanceTracker.bundle.scp.css</PackagePath>
-      <Modified>2025-01-04T15:11:56.233</Modified>
+      <Modified>2025-01-17T02:26:32.754</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalFinanceTracker\PersonalFinanceTracker\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>

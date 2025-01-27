@@ -12,6 +12,12 @@ namespace PersonalFinanceTracker.Models
         public  string Username { get; set; }
         public  string Password { get; set; }
         public  string PreferredCurrency { get; set; }
+        public decimal Balance { get; set; }
+
+        public ICollection<Transaction> Transactions { get; set; }
+
+        public ICollection<Debt> Debts { get; set; }
+
     }
 
 }

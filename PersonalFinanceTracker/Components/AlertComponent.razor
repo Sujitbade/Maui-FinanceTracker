@@ -1,0 +1,12 @@
+﻿@code {
+    [Parameter] public bool ShowAlert { get; set; }
+    [Parameter] public string AlertMessage { get; set; }
+    [Parameter] public Severity AlertSeverity { get; set; } = Severity.Warning;
+}
+
+@if (ShowAlert)
+{
+    <MudAlert Severity="@AlertSeverity">
+        @AlertMessage
+    </MudAlert>
+}

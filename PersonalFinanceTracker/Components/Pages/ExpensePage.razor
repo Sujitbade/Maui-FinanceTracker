@@ -1,0 +1,118 @@
+﻿@page "/expensePage"
+
+@using PersonalFinanceTracker.Models
+@inject TransactionService transactionService
+
+<h3 class="mb-4">Expense Overview</h3>
+
+<MudGrid Spacing="3">
+    <MudItem xs="10" sm="6" md="3">
+        <MudCard Outlined="true" Class="p-1">
+            <MudCardContent>
+                <MudText Typo="Typo.body1" Class="fw-bold">Total Expense</MudText>
+                <MudText Typo="Typo.h6" Class="text-success">@TotalExpenseAmount.ToString("C")</MudText>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="5" sm="6" md="3">
+        <MudCard Outlined="true" Class="p-1">
+            <MudCardContent>
+                <MudText Typo="Typo.body1" Class="fw-bold">Expense Transactions</MudText>
+                <MudText Typo="Typo.h6" Class="text-primary">@TotalExpenseTransaction</MudText>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="12" md="6" Class="d-flex justify-end align-center">
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="OpenForm">Add Expenses</MudButton>
+    </MudItem>
+</MudGrid>
+
+<hr class="my-4" />
+
+<MudGrid Spacing="3">
+    <MudItem xs="14" sm="4">
+        <MudDateRangePicker T="DateTime" @bind-DateRange="selectedDateRange" Label="Filter by Date Range" />
+    </MudItem>
+    <MudItem xs="12" sm="6" Class="d-flex justify-end align-center">
+        <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="ClearDateRange">Reset Date Range</MudButton>
+    </MudItem>
+</MudGrid>
+
+<hr class="my-4" />
+
+@if (showForm)
+{
+    <div class="modal fade show d-block" tabindex="-1" role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Transaction</h5>
+                    <button type="button" class="btn-close" @onclick="CloseForm"></button>
+                </div>
+                <div class="modal-body">
+                    <MudForm>
+                        <MudTextField Label="Description" @bind-Value="newTransaction.Description"
+                                      Required="true" Placeholder="Enter transaction description"
+                                      Variant="Variant.Outlined" />
+                        <MudDatePicker Label="Date" @bind-Value ="newTransaction.Date" Required="true" Placeholder="Select transaction date"
+                                       Variant="Variant.Outlined" />
+                        <MudTextField Label="Amount" @bind-Value="newTransaction.Amount"
+                                      Required="true" Placeholder="Enter amount"
+                                      Variant="Variant.Outlined" Type="number" />
+                        <MudSelect T="string" Label="Tag" @bind-Value="selectedTag"
+                                   Required="true" Variant="Variant.Outlined">
+                            @foreach (var tag in Tags)
+                            {
+                                <MudSelectItem Value="@tag">@tag</MudSelectItem>
+                            }
+                        </MudSelect>
+                    </MudForm>
+                </div>
+                <div class="modal-footer" gap="4">
+                    <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="AddTransaction">
+                        Save
+                    </MudButton>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="CloseForm">
+                        Cancel
+                    </MudButton>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+
+
+
+<MudPaper Class="p-3 mt-4" Elevation="1">
+    <MudTable Filter="new Func<Transaction, bool>(FilterFunc)" Items="transactions" Height="360px" Breakpoint="Breakpoint.Sm" Virtualize="true" FixedHeader="true" SortLabel="Sort By">
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">Incomes</MudText>
+            <MudSpacer />
+            <MudTextField @bind-Value="searchString" Placeholder="Search by Description" Variant="Variant.Outlined" />
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh>SN</MudTh>
+            <MudTh>Description</MudTh>
+            <MudTh>Date</MudTh>
+            <MudTableSortLabel SortBy="new Func<Transaction, object>(x => x.Amount)">
+                Amount
+            </MudTableSortLabel>
+            <MudTh>Tag</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@(transactions.IndexOf(context) + 1)</MudTd>
+            <MudTd>@context.Description</MudTd>
+            <MudTd>@context.Date.ToShortDateString()</MudTd>
+            <MudTd>@context.Amount</MudTd>
+            <MudTd>@context.Tag</MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>
+</MudPaper>
+
+
+
+

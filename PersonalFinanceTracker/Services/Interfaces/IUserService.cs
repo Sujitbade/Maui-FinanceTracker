@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using PersonalFinanceTracker.Models;
 
@@ -9,8 +6,9 @@ namespace PersonalFinanceTracker.Services
 {
     public interface IUserService
     {
-        Task SaveUserAsync(User user);
-
+        Task<bool> RegisterUserAsync(User user);
+        Task<User?> AuthenticateUserAsync(string username, string password);
         Task<List<User>> LoadUsersAsync();
+        Task SaveUserAsync(User user);
     }
 }

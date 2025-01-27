@@ -3,40 +3,60 @@
   "WorkspaceRootPath": "D:\\PersonalFinanceTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\services\\userbalanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\services\\userbalanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\models\\debt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\models\\debt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\debtpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\debtpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\customtag.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\customtag.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\expensepage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\expensepage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\expensepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\expensepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\services\\tagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\services\\tagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\register.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\register.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\alertcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\alertcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\layout\\authlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\layout\\authlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\components\\pages\\login.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\components\\pages\\login.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\services\\interfaces\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\services\\interfaces\\itransactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|d:\\personalfinancetracker\\personalfinancetracker\\services\\debtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45FDB568-7371-4E19-A9AE-9E0FF02F5514}|PersonalFinanceTracker\\PersonalFinanceTracker.csproj|solutionrelative:personalfinancetracker\\services\\debtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,121 +66,183 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T04:44:02.871Z",
+              "DocumentIndex": 0,
+              "Title": "UserBalanceService.cs",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\UserBalanceService.cs",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Services\\UserBalanceService.cs",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\UserBalanceService.cs",
+              "RelativeToolTip": "PersonalFinanceTracker\\Services\\UserBalanceService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T16:43:17.534Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Login.razor",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Login.razor",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\Login.razor",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Login.razor",
-              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\Login.razor",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAEAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T04:42:06.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dashboard.razor",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Dashboard.razor",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\Dashboard.razor",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Dashboard.razor",
-              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\Dashboard.razor",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAuwF0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T01:55:40.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\MauiProgram.cs",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\MauiProgram.cs",
-              "RelativeToolTip": "PersonalFinanceTracker\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Models\\Transaction.cs",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Models\\Transaction.cs",
+              "RelativeToolTip": "PersonalFinanceTracker\\Models\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T19:46:34.598Z"
+              "WhenOpened": "2025-01-27T16:42:00.261Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Register.razor",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Register.razor",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\Register.razor",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Register.razor",
-              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\Register.razor",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAB8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T19:45:22.161Z",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Models\\User.cs",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Models\\User.cs",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Models\\User.cs",
+              "RelativeToolTip": "PersonalFinanceTracker\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T16:41:58.975Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ITransactionService.cs",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\Interfaces\\ITransactionService.cs",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Services\\Interfaces\\ITransactionService.cs",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\Interfaces\\ITransactionService.cs",
-              "RelativeToolTip": "PersonalFinanceTracker\\Services\\Interfaces\\ITransactionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T19:51:30.783Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.razor.cs",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Register.razor.cs",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\Register.razor.cs",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Register.razor.cs",
-              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\Register.razor.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBwAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T18:45:28.676Z",
+              "Title": "CustomTag.razor",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\CustomTag.razor",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\CustomTag.razor",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\CustomTag.razor",
+              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\CustomTag.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-17T06:39:20.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AuthLayout.razor",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Layout\\AuthLayout.razor",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Layout\\AuthLayout.razor",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Layout\\AuthLayout.razor",
-              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Layout\\AuthLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Title": "DebtPage.razor",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\DebtPage.razor",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\DebtPage.razor",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\DebtPage.razor",
+              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\DebtPage.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwDUAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T04:41:58.694Z",
+              "WhenOpened": "2025-01-17T05:31:22.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashBoard.razor",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\DashBoard.razor",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\DashBoard.razor",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\DashBoard.razor",
+              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\DashBoard.razor",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAF4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-17T06:24:22.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Debt.cs",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Models\\Debt.cs",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Models\\Debt.cs",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Models\\Debt.cs",
+              "RelativeToolTip": "PersonalFinanceTracker\\Models\\Debt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T05:29:13.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "PersonalFinanceTracker\\Services\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Title": "ExpensePage.razor",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\ExpensePage.razor",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\ExpensePage.razor",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\ExpensePage.razor",
+              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\ExpensePage.razor",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAQwEcAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-17T06:12:56.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExpensePage.razor.cs",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\ExpensePage.razor.cs",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\ExpensePage.razor.cs",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\ExpensePage.razor.cs",
+              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\ExpensePage.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T19:43:43.405Z"
+              "WhenOpened": "2025-01-17T06:13:03.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TagService.cs",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\TagService.cs",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Services\\TagService.cs",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\TagService.cs",
+              "RelativeToolTip": "PersonalFinanceTracker\\Services\\TagService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T06:39:32.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-17T06:40:47.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AlertComponent.razor",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\AlertComponent.razor",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\AlertComponent.razor",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\AlertComponent.razor",
+              "RelativeToolTip": "PersonalFinanceTracker\\Components\\AlertComponent.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-17T06:18:01.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.razor.cs",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Login.razor.cs",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Components\\Pages\\Login.razor.cs",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Components\\Pages\\Login.razor.cs",
+              "RelativeToolTip": "PersonalFinanceTracker\\Components\\Pages\\Login.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T06:19:20.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DebtService.cs",
+              "DocumentMoniker": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\DebtService.cs",
+              "RelativeDocumentMoniker": "PersonalFinanceTracker\\Services\\DebtService.cs",
+              "ToolTip": "D:\\PersonalFinanceTracker\\PersonalFinanceTracker\\Services\\DebtService.cs",
+              "RelativeToolTip": "PersonalFinanceTracker\\Services\\DebtService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwC0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T05:30:33.786Z"
             }
           ]
         }

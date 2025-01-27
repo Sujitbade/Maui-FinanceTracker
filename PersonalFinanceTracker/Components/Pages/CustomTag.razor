@@ -1,0 +1,60 @@
+﻿@page "/add-tag"
+
+<h3 class="mb-4">Add New Tag</h3>
+
+<div class="container">
+    <form @onsubmit="AddTag">
+        <!-- Tag Input Field -->
+        <div class="form-group">
+            <label for="tagName">Tag Name</label>
+            <input type="text" id="tagName" class="form-control" @bind="newTag" required />
+        </div>
+
+        <!-- Add Button -->
+        <button type="submit" class="btn btn-primary" disabled="@(!IsFormValid())">Add Tag</button>
+    </form>
+
+    <!-- Alert Message -->
+    @if (ShowAlert)
+    {
+        <div class="alert alert-@AlertSeverity" role="alert">
+            @AlertMessage
+        </div>
+    }
+</div>
+
+@code {
+    private string newTag = string.Empty;
+    private bool ShowAlert = false;
+    private string AlertMessage = string.Empty;
+    private string AlertSeverity = "info";  // Could be 'success', 'error', etc.
+
+    private async Task AddTag()
+    {
+        try
+        {
+            // Attempt to add the new tag
+            await tagService.AddTagAsync(newTag);
+
+            // Show success message
+            AlertSeverity = "success";
+            AlertMessage = "Tag added successfully!";
+            ShowAlert = true;
+
+            // Clear the form
+            newTag = string.Empty;
+        }
+        catch (Exception ex)
+        {
+            // Show error message
+            AlertSeverity = "danger";
+            AlertMessage = $"Error: {ex.Message}";
+            ShowAlert = true;
+        }
+    }
+
+    private bool IsFormValid()
+    {
+        return !string.IsNullOrWhiteSpace(newTag);
+    }
+}

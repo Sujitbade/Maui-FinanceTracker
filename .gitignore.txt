@@ -1,0 +1,8 @@
+# Ignore Visual Studio files
+.vs/
+*.vsidx
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db

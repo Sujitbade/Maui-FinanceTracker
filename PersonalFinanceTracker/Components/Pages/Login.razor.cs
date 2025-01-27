@@ -1,11 +1,23 @@
+using MudBlazor;
+
 namespace PersonalFinanceTracker.Components.Pages
 {
     public partial class Login
     {
-        private int spacing = 4;
         private string username;
         private string password;
         private string errorMessage;
+
+        bool isShow;
+        InputType PasswordInput = InputType.Password;
+        string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
+
+        void showPasswordButton()
+        {
+            isShow = !isShow; // Toggle visibility state
+            PasswordInputIcon = isShow ? Icons.Material.Filled.Visibility : Icons.Material.Filled.VisibilityOff;
+            PasswordInput = isShow ? InputType.Text : InputType.Password;
+        }
 
         private async Task LoginUser()
         {

@@ -1,0 +1,147 @@
+﻿@page "/debt-page"
+
+@using PersonalFinanceTracker.Models
+@inject DebtService debtService
+
+<h3 class="mb-4">Debt Overview</h3>
+
+<MudGrid Spacing="3">
+    <!-- Total Debt -->
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Outlined="true" Class="p-1">
+            <MudCardContent>
+                <MudText Typo="Typo.body1" Class="fw-bold">Total Debt</MudText>
+                <MudText Typo="Typo.h6" Class="text-danger">@TotalDebtAmount.ToString("C")</MudText>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <!-- Debt Transactions -->
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Outlined="true" Class="p-1">
+            <MudCardContent>
+                <MudText Typo="Typo.body1" Class="fw-bold">Debt Transactions</MudText>
+                <MudText Typo="Typo.h6" Class="text-primary">@TotalDebtTransaction</MudText>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <!-- Button to Add Debt -->
+    <MudItem xs="12" md="6" Class="d-flex justify-end align-center">
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="OpenDebtForm">Add Debt</MudButton>
+    </MudItem>
+</MudGrid>
+
+<hr class="my-4" />
+
+<!-- Debt Form Modal -->
+@if (showDebtForm)
+{
+    <div class="modal fade show d-block" tabindex="-1" role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Debt</h5>
+                    <button type="button" class="btn-close" @onclick="CloseDebtForm"></button>
+                </div>
+                <div class="modal-body">
+                    <MudForm>
+                        <MudTextField Label="Description" @bind-Value="newDebt.Source"
+                                      Required="true" Placeholder="Enter debt description"
+                                      Variant="Variant.Outlined" />
+                        <MudDatePicker Label="Due Date" @bind-Value="newDebt.DueDate"
+                                       Required="true" Placeholder="Select due date"
+                                       Variant="Variant.Outlined" />
+                        <MudTextField Label="Amount" @bind-Value="newDebt.Amount"
+                                      Required="true" Placeholder="Enter debt amount"
+                                      Variant="Variant.Outlined" Type="number" />
+                    </MudForm>
+                </div>
+                <div class="modal-footer" gap="4">
+                    <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="SaveDebt">
+                        Save
+                    </MudButton>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="CloseDebtForm">
+                        Cancel
+                    </MudButton>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+
+<hr class="my-4" />
+
+<!-- Debt Table -->
+<MudPaper Class="p-3 mt-4" Elevation="1">
+    <MudTable Items="debts" Height="360px" Breakpoint="Breakpoint.Sm" Virtualize="true" FixedHeader="true" SortLabel="Sort By">
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">Debts</MudText>
+        </ToolBarContent>
+        <HeaderContent>
+            <MudTh>SN</MudTh>
+            <MudTh>Description</MudTh>
+            <MudTh>Due Date</MudTh>
+            <MudTh>Amount</MudTh>
+        </HeaderContent>
+        <RowTemplate>
+            <MudTd>@(debts.IndexOf(context) + 1)</MudTd>
+            <MudTd>@context.Source</MudTd>
+            <MudTd>@context.DueDate.ToShortDateString()</MudTd>
+            <MudTd>@context.Amount.ToString("C")</MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>
+</MudPaper>
+
+@code {
+    private bool showDebtForm = false;
+    private Debt newDebt = new Debt();
+    private List<Debt> debts = new List<Debt>();
+
+    // Sample debt data for display purposes
+    private decimal TotalDebtAmount => debts.Sum(d => d.Amount);
+    private int TotalDebtTransaction => debts.Count;
+
+    // Method to open the form for adding a debt
+    private void OpenDebtForm()
+    {
+        showDebtForm = true;
+    }
+
+    // Method to close the debt form
+    private void CloseDebtForm()
+    {
+        showDebtForm = false;
+        newDebt = new Debt(); // Reset form
+    }
+
+    // Method to save the new debt
+    private async Task SaveDebt()
+    {
+       // Save the new debt using DebtService
+        await debtService.SaveDebtsAsync(new List<Debt> { newDebt });
+
+        // Refresh the debt list after saving
+        debts = await debtService.GetAllDebtsAsync();
+
+        // Close the form
+        CloseDebtForm();
+    }
+
+    // Filter method for the debt table (if necessary)
+    private bool FilterFunc(Debt debt)
+    {
+        // Implement filter logic if needed (e.g., based on date range or search string)
+        return true;
+    }
+
+    // Load debts when component initializes
+    protected override async Task OnInitializedAsync()
+    {
+        debts = await debtService.GetAllDebtsAsync();
+    }
+}

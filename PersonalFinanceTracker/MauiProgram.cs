@@ -22,6 +22,12 @@ namespace PersonalFinanceTracker
 
             builder.Services.AddSingleton<IUserService, UserService>();
             builder.Services.AddSingleton<AuthenticationService>();
+            builder.Services.AddScoped<TagService>();
+            builder.Services.AddScoped<TransactionService>();
+            builder.Services.AddMudServices();
+            builder.Services.AddScoped<DebtService>();
+            builder.Services.AddScoped<UserBalanceService>();
+
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();

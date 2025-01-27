@@ -1,0 +1,16 @@
+[
+  {
+    "Source": "New",
+    "Amount": 1000.0,
+    "DueDate": "2025-01-17T12:30:13.4407221+05:45",
+    "Status": null,
+    "UserId": 0
+  },
+  {
+    "Source": "New Debt",
+    "Amount": 1000.0,
+    "DueDate": "2025-01-17T12:41:50.5323713+05:45",
+    "Status": null,
+    "UserId": 0
+  }
+]

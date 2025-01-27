@@ -2,6 +2,7 @@ wwwroot\_content\MudBlazor\MudBlazor.min.css
 wwwroot\_content\MudBlazor\MudBlazor.min.js
 Components\Layout\MainLayout.razor.css
 Components\Layout\NavMenu.razor.css
+Data\tags.json
 OpenSans-Regular.ttf
 appicon.ico
 appiconLargeTile.scale-100.png

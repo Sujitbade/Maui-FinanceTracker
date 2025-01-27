@@ -8,3 +8,14 @@
 @using PersonalFinanceTracker.Components
 @using MudBlazor
 @using Newtonsoft
+@using PersonalFinanceTracker.Models
+@using PersonalFinanceTracker.Services
+
+@inject TagService tagService
+@inject TransactionService transactionService
+@inject NavigationManager navigationManager
+@inject DebtService debtService
+@inject IUserService userService
+@inject AuthenticationService authStateService
+@inject UserBalanceService userBalanceService
+@inject DebtService debtService

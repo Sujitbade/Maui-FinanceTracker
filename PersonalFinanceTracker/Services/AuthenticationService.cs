@@ -1,34 +1,31 @@
 ﻿using System;
+using Microsoft.AspNetCore.Components;
 using PersonalFinanceTracker.Models;
 
 namespace PersonalFinanceTracker.Services
 {
     public class AuthenticationService
     {
-        private User authenticatedUser;
+        private User currentUser;
 
         public User GetAuthenticatedUser()
         {
-            return authenticatedUser;
+            return currentUser;
         }
 
         public void SetAuthenticatedUser(User user)
         {
-            authenticatedUser = user;
+            currentUser = user;
         }
 
-        public bool IsAuthenticated()
+        public async Task<decimal> GetUserBalance()
         {
-            if (authenticatedUser != null)
-            {
-                return true;
-            }
-            return false;
+            return currentUser.Balance;
         }
 
         public void Logout()
         {
-            authenticatedUser = null;
+            currentUser = null;
         }
     }
 }

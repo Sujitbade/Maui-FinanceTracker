@@ -1,0 +1,38 @@
+[
+  {
+    "UserId": 1,
+    "Username": "user",
+    "Password": "BPiZbadjt6lpsQKO4wB1aerzpjVIbdqyEdUSyFud\u002BPs=",
+    "PreferredCurrency": "EUR",
+    "Balance": 0.0,
+    "Transactions": null,
+    "Debts": null
+  },
+  {
+    "UserId": 2,
+    "Username": "test",
+    "Password": "n4bQgYhMfWWaL\u002BqgxVrQFaO/TxsrC4Is0V1sFbDwCgg=",
+    "PreferredCurrency": "IRS",
+    "Balance": 0.0,
+    "Transactions": null,
+    "Debts": null
+  },
+  {
+    "UserId": 3,
+    "Username": "Notuser",
+    "Password": "BujAYr0r2GpLMVfjXMBOiuRFcqJ5jaZRkr7RvXF8\u002Blw=",
+    "PreferredCurrency": "EUR",
+    "Balance": 0.0,
+    "Transactions": null,
+    "Debts": null
+  },
+  {
+    "UserId": 4,
+    "Username": "new",
+    "Password": "EVB6Di9eadXfpApiob17buV\u002Ba82FxnybhDGzb/8hxDc=",
+    "PreferredCurrency": "NRS",
+    "Balance": 0.0,
+    "Transactions": null,
+    "Debts": null
+  }
+]

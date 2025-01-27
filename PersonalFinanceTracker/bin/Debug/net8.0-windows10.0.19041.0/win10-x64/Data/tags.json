@@ -1,0 +1,20 @@
+{
+  "Tags": [
+    "Salary",
+    "Freelance",
+    "Investments",
+    "Sales",
+    "Business",
+    "Food",
+    "Rent",
+    "Utilities",
+    "Internet",
+    "Transportation",
+    "Groceries",
+    "Entertainment",
+    "Insurance",
+    "Medical Bills",
+    "Miscellaneous",
+    "Debt Repayment" //Count Debt Repayment as a expense.
+  ]
+}

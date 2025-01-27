@@ -18,7 +18,7 @@
                     <MudTextField @bind-Value="username" Label="Username" Variant="Variant.Outlined"></MudTextField>
                 </div>
                 <div>
-                    <MudTextField @bind-Value="password" Label="Password" Variant="Variant.Outlined" Type="password"></MudTextField>
+                    <MudTextField @bind-Value="password" Label="Password" Variant="Variant.Outlined" InputType="@PasswordInput" Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="showPasswordButton" AdornmentAriaLabel="Show Password" />
                 </div>
                 <MudButton OnClick="LoginUser" Variant="Variant.Filled">Login</MudButton>
             </form>

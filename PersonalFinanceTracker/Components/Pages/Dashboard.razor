@@ -1,44 +1,58 @@
 ﻿@page "/dashboard"
 @using PersonalFinanceTracker.Models
-@inject NavigationManager Navigation
+@using PersonalFinanceTracker.Services
+@inject AuthenticationService authStateService
+@inject TransactionService transactionService
+@inject UserBalanceService userBalanceService
+@using MudBlazor
 
-<MudContainer Class="mt-4">
-    <MudGrid Class="mb-4">
-        <MudItem xs="12" sm="6" md="4">
-            <MudCard Class="dashboard-card" >
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Total Balance</MudText>
-                    <MudText Typo="Typo.h3">@totalBalance.ToString("C")</MudText>
-                </MudCardContent>
-                <MudCardStyle Class="bg-warning text-white text-center" />
-            </MudCard>
-        </MudItem>
-        <MudItem xs="12" sm="6" md="4">
-            <MudCard Class="dashboard-card">
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Total Inflows</MudText>
-                    <MudText Typo="Typo.h3">@totalIncome.ToString("C")</MudText>
-                </MudCardContent>
-                <MudCardStyle Class="bg-success text-white text-center" />
-            </MudCard>
-        </MudItem>
-        <MudItem xs="12" sm="6" md="4">
-            <MudCard Class="dashboard-card">
-                <MudCardContent>
-                    <MudText Typo="Typo.h5">Total Outflows</MudText>
-                    <MudText Typo="Typo.h3">@totalExpense.ToString("C")</MudText>
-                </MudCardContent>
-                <MudCardStyle Class="bg-danger text-white text-center" />
-            </MudCard>
-        </MudItem>
-    </MudGrid>
-    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="OpenForm" Class="mt-4">Add Transaction</MudButton>
+<h3>Dashboard</h3>
 
-    <MudTable Items="transactions" Class="mt-3">
+<MudGrid Spacing="3">
+    <!-- Total Income -->
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Outlined="true" Class="p-1">
+            <MudCardContent>
+                <MudText Typo="Typo.body1" Class="fw-bold">Total Income</MudText>
+                <MudText Typo="Typo.h6" Class="text-success">@TotalIncome.ToString("C")</MudText>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <!-- Total Expense -->
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Outlined="true" Class="p-1">
+            <MudCardContent>
+                <MudText Typo="Typo.body1" Class="fw-bold">Total Expense</MudText>
+                <MudText Typo="Typo.h6" Class="text-danger">@TotalExpense.ToString("C")</MudText>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <!-- Current Balance -->
+    <MudItem xs="12" sm="6" md="3">
+        <MudCard Outlined="true" Class="p-1">
+            <MudCardContent>
+                <MudText Typo="Typo.body1" Class="fw-bold">Total Balance</MudText>
+                <MudText Typo="Typo.h6" Class="text-primary">@UserBalance.ToString("C")</MudText>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    <!-- Donut Chart -->
+    <MudItem xs="12" sm="6" md="6">
+        <MudPaper Class="pa-4">
+            <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" InputData="@chartData" InputLabels="@chartLabels" />
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+
+<MudPaper Class="p-3 mt-4" Elevation="1">
+    <MudTable Items="transactions" SortLabel="Sort By" FixedHeader="true" Height="300px">
         <HeaderContent>
             <MudTh>Description</MudTh>
             <MudTh>Date</MudTh>
-            <MudTh>Amount</MudTh>
+            <MudTableSortLabel SortBy="new Func<Transaction, object>(x => x.Amount)">Amount</MudTableSortLabel>
             <MudTh>Type</MudTh>
         </HeaderContent>
         <RowTemplate>
@@ -47,142 +61,42 @@
             <MudTd>@context.Amount.ToString("C")</MudTd>
             <MudTd>@context.Type</MudTd>
         </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
     </MudTable>
+</MudPaper>
 
 
-
-    @if (showForm)
-    {
-        <MudCard Class="mt-4">
-            <MudCardContent>
-                <MudText Typo="Typo.h5">Add Transaction</MudText>
-                <MudTextField Label="Description" @bind-Value="newTransaction.Description" />
-                <MudDatePicker Label="Date" Value="newTransaction.Date" ValueChanged="OnDateChanged" Max="DateTime.Today" />
-                <MudTextField Label="Amount" @bind-Value="newTransaction.Amount" Type="TextFieldType.Number" Min="0" />
-
-                <MudSelect Label="Type" @bind-Value="selectedType" T="string" Class="mt-3" OnValueChanged="UpdateTags">
-                    <MudSelectItem Value=@("Income")>Income</MudSelectItem>
-                    <MudSelectItem Value=@("Expense")>Expense</MudSelectItem>
-                </MudSelect>
-
-                <MudSelect Label="Tags" @bind-Value="selectedTag" T="string" Class="mt-3" OnValueChanged="UpdateTags">
-                    @if (selectedType == "Income")
-                    {
-                        @foreach (var tag in newTransaction.IncomeTags)
-                        {
-                            <MudSelectItem Value="@tag">@tag</MudSelectItem>
-                        }
-                    }
-                    else if (selectedType == "Expense")
-                    {
-                        @foreach (var tag in newTransaction.ExpenseTags)
-                        {
-                            <MudSelectItem Value="@tag">@tag</MudSelectItem>
-                        }
-                    }
-                </MudSelect>
-
-                <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="SaveTransaction" Class="mt-3">Save</MudButton>
-                <MudButton Variant="Variant.Filled" Color="Color.Secondary" OnClick="CloseForm" Class="mt-3">Cancel</MudButton>
-            </MudCardContent>
-        </MudCard>
-    }
-</MudContainer>
 
 @code {
-    private List<Transaction> transactions = new();
-    private Transaction newTransaction = new();
-    private string selectedType = "Income";
-    private string selectedTag;
-    private bool showForm;
-    private decimal totalExpense;
-    private decimal totalIncome;
-    private decimal totalBalance;
+    private decimal TotalIncome => transactions.Where(t => t.Type == "Income").Sum(t => t.Amount);
+    private decimal TotalExpense => transactions.Where(t => t.Type == "Expense").Sum(t => t.Amount);
+    private decimal UserBalance;
+    private decimal Debt => debts.Sum(d => d.Amount);
 
-    private string transactionsFilePath = Path.Combine(AppContext.BaseDirectory, "transactions.json");
+    // Chart data and labels
+    private double[] chartData => new double[] { (double)TotalIncome, (double)TotalExpense, (double)Debt };
+    private string[] chartLabels => new string[] { "Total Income", "Total Expense", "Debt" };
 
-    protected override void OnInitialized()
+    // Transactions list
+    private List<Transaction> transactions = new List<Transaction>();
+    private Transaction newTransaction = new Transaction();
+    private List<Debt> debts = new List<Debt>(); // Correcting variable name
+    private string selectedTransactionType = "Income"; // Default type
+    private bool isFormValid => !string.IsNullOrWhiteSpace(newTransaction.Description) && newTransaction.Amount > 0;
+
+    // Called when component initializes
+    protected override async Task OnInitializedAsync()
     {
-        LoadTransactions();
-        CalculateTotals();
-    }
-
-    private void OpenForm()
-    {
-        newTransaction = new Transaction();
-        selectedTag = string.Empty;
-        newTransaction.Date = DateTime.Today;
-        showForm = true;
-    }
-
-    private void CloseForm()
-    {
-        showForm = false;
-    }
-
-    private void UpdateTags(string type)
-    {
-        // Logic to update tags based on transaction type
-        if (type == "Income")
+        var currentUser = authStateService.GetAuthenticatedUser();
+        if (currentUser != null)
         {
-            newTransaction.IncomeTags = new List<string> { "Salary", "Bonus" };
-        }
-        else if (type == "Expense")
-        {
-            newTransaction.ExpenseTags = new List<string> { "Food", "Transport", "Entertainment" };
+            UserBalance = await userBalanceService.GetUserBalanceAsync(currentUser.UserId);
+            transactions = await transactionService.GetTransactionsAsync(currentUser.UserId);
+            debts = await debtService.GetDebtsAsync(currentUser.UserId);
         }
     }
 
-    private void SaveTransaction()
-    {
-        if (!string.IsNullOrEmpty(newTransaction.Description) && newTransaction.Amount > 0)
-        {
-            newTransaction.Type = selectedType;
-
-            // Update tags based on transaction type
-            if (selectedType == "Income")
-            {
-                newTransaction.IncomeTags = new List<string> { selectedTag };
-            }
-            else
-            {
-                newTransaction.ExpenseTags = new List<string> { selectedTag };
-            }
-
-            transactions.Add(newTransaction);
-            CalculateTotals();
-            SaveTransactions();
-        }
-
-        CloseForm();
-    }
-
-    private void CalculateTotals()
-    {
-        totalIncome = transactions.Where(t => t.Type == "Income").Sum(t => t.Amount);
-        totalExpense = transactions.Where(t => t.Type == "Expense").Sum(t => t.Amount);
-        totalBalance = totalIncome - totalExpense;
-    }
-
-
-    private void SaveTransactions()
-    {
-        var json = Newtonsoft.Json.JsonConvert.SerializeObject(transactions, Newtonsoft.Json.Formatting.Indented);
-        System.IO.File.WriteAllText(transactionsFilePath, json);
-    }
-
-    private void LoadTransactions()
-    {
-        if (System.IO.File.Exists(transactionsFilePath))
-        {
-            var json = System.IO.File.ReadAllText(transactionsFilePath);
-            transactions = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Transaction>>(json) ?? new List<Transaction>();
-            CalculateTotals();
-        }
-    }
-
-    private void OnDateChanged(DateTime newDate)
-    {
-        newTransaction.Date = newDate;
     }
 }
